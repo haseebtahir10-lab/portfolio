@@ -364,6 +364,38 @@
       .nav-links { display: none; }
       section { padding: 80px 0; }
     }
+    /* ============================
+   PROFILE IMAGE (PREMIUM STYLE)
+============================ */
+
+.profile-card {
+  position: relative;
+  text-align: center;
+}
+
+.profile-img-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  padding: 4px;
+  background: var(--gradient);
+  box-shadow: 0 0 40px rgba(56,189,248,0.5);
+  animation: glowPulse 3s infinite alternate;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg);
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 20px rgba(56,189,248,0.4); }
+  to { box-shadow: 0 0 50px rgba(168,85,247,0.7); }
+}
   </style>
 </head>
 <body class="dark">
@@ -415,7 +447,10 @@
           </a>
         </div>
       </div>
-      <div class="hero-card">
+      <div class="hero-card profile-card">
+  <div class="profile-img-wrapper">
+    <img src="profile.jpg" alt="Haseeb Tahir" class="profile-img">
+  </div>
         <h3>Professional Snapshot</h3>
         <div class="hero-stats">
           <div class="stat">
@@ -642,3 +677,4 @@
   </script>
 </body>
 </html>
+
