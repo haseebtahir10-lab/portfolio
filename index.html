@@ -1,644 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haseeb Tahir | Senior Software QA Engineer</title>
-  <meta name="description" content="Premium portfolio of Senior Software QA Engineer Haseeb Tahir" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Haseeb Tahir | Senior Software QA Engineer</title>
+<meta name="description" content="Premium portfolio of Senior Software QA Engineer Haseeb Tahir" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <style>
-    /* ============================
-       THEME VARIABLES (LIGHT / DARK)
-    ============================ */
-    :root {
-      --bg: #f8fafc;
-      --bg-soft: #f1f5f9;
-      --card: #ffffff;
-      --primary: #0284c7;
-      --secondary: #16a34a;
-      --accent: #7c3aed;
-      --text: #020617;
-      --muted: #475569;
-      --border: #e2e8f0;
-      --gradient: linear-gradient(135deg, #0284c7, #16a34a, #7c3aed);
-    }
+<style>
+/* ============================
+   THEME VARIABLES
+============================ */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary: #0284c7;
+  --secondary: #16a34a;
+  --accent: #7c3aed;
+  --text: #020617;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --gradient: linear-gradient(135deg, #0284c7, #16a34a, #7c3aed);
+}
 
-    body.dark {
-      --bg: #020617;
-      --bg-soft: #020617;
-      --card: #020617;
-      --primary: #38bdf8;
-      --secondary: #22c55e;
-      --accent: #a855f7;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --border: #1e293b;
-      --gradient: linear-gradient(135deg, #38bdf8, #22c55e, #a855f7);
-    }
+body.dark {
+  --bg: #020617;
+  --card: #020617;
+  --primary: #38bdf8;
+  --secondary: #22c55e;
+  --accent: #a855f7;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --gradient: linear-gradient(135deg, #38bdf8, #22c55e, #a855f7);
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", sans-serif;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
 
-    html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-    body {
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(56,189,248,0.08), transparent 60%),
-                  radial-gradient(1200px 600px at 90% 20%, rgba(168,85,247,0.08), transparent 60%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
+body {
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(56,189,248,0.08), transparent 60%),
+              radial-gradient(1200px 600px at 90% 20%, rgba(168,85,247,0.08), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: 0.3s;
+}
 
-    a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 24px;
-    }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
 
-    section { padding: 100px 0; }
+section { padding: 100px 0; }
 
-    /* ============================
-       NAVBAR
-    ============================ */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(2, 6, 23, 0.6);
-      border-bottom: 1px solid var(--border);
-    }
+/* ============================
+   NAVBAR
+============================ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(2, 6, 23, 0.6);
+  border-bottom: 1px solid var(--border);
+}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 70px;
-      gap: 20px;
-    }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
 
-    .logo {
-      font-size: 20px;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-    }
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
 
-    .nav-links a {
-      font-size: 14px;
-      color: var(--muted);
-      position: relative;
-      transition: 0.3s;
-    }
+.nav-links a {
+  font-size: 14px;
+  color: var(--muted);
+  transition: 0.3s;
+}
 
-    .nav-links a:hover { color: var(--primary); }
+.nav-links a:hover { color: var(--primary); }
 
-    .theme-toggle {
-      border: 1px solid var(--border);
-      background: var(--card);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
 
-    .theme-toggle:hover { border-color: var(--primary); color: var(--primary); }
+/* ============================
+   HERO
+============================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
 
-    /* ============================
-       HERO
-    ============================ */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 60px;
-    }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: center;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 40px;
-      align-items: center;
-    }
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(56,189,248,0.1);
+  border: 1px solid rgba(56,189,248,0.35);
+  font-size: 13px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(56,189,248,0.1);
-      border: 1px solid rgba(56,189,248,0.35);
-      font-size: 13px;
-      color: var(--primary);
-      margin-bottom: 16px;
-    }
+.hero h1 {
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
 
-    .hero h1 {
-      font-size: clamp(42px, 5vw, 64px);
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
+.gradient-text {
+  background: linear-gradient(270deg, #38bdf8, #22c55e, #a855f7);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
 
-    .highlight {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    .hero p {
-      color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 32px;
-      max-width: 650px;
-    }
+.cursor {
+  display: inline-block;
+  width: 6px;
+  background: var(--primary);
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
 
-    .buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+@keyframes blink { 50% { opacity: 0; } }
 
-    .btn {
-      padding: 14px 26px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 14px;
-      font-weight: 500;
-      transition: 0.3s;
-      cursor: pointer;
-    }
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 32px;
+}
 
-    .btn-primary {
-      background: var(--gradient);
-      color: #020617;
-      border: none;
-    }
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-    .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+.btn {
+  padding: 14px 26px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: 0.3s;
+}
 
-    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+.btn-primary {
+  background: var(--gradient);
+  color: #020617;
+  border: none;
+}
 
-    .hero-card {
-      background: linear-gradient(180deg, rgba(2,6,23,0.8), rgba(2,6,23,1));
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
+.btn:hover { transform: translateY(-2px); }
 
-    .hero-card h3 { font-size: 18px; margin-bottom: 14px; }
+.hero-card {
+  background: linear-gradient(180deg, rgba(2,6,23,0.8), rgba(2,6,23,1));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 16px;
-    }
+/* Glow + Float */
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: var(--gradient);
+  filter: blur(20px);
+  opacity: 0.25;
+  z-index: -1;
+}
 
-    .stat {
-      padding: 16px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(56,189,248,0.03);
-    }
+.float {
+  animation: float 6s ease-in-out infinite;
+}
 
-    .stat strong {
-      font-size: 22px;
-      display: block;
-      margin-bottom: 6px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
 
-    .stat span { font-size: 13px; color: var(--muted); }
+/* ============================
+   CARDS + ANIMATIONS
+============================ */
+.card {
+  background: linear-gradient(180deg, rgba(2,6,23,0.75), rgba(2,6,23,1));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  transition: 0.35s;
+}
 
-    /* ============================
-       SECTION HEADERS
-    ============================ */
-    .section-title { font-size: 32px; margin-bottom: 12px; }
-    .section-subtitle { color: var(--muted); font-size: 15px; margin-bottom: 48px; }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(56,189,248,0.25);
+}
 
-    /* ============================
-       CARDS
-    ============================ */
-    .card {
-      background: linear-gradient(180deg, rgba(2,6,23,0.75), rgba(2,6,23,1));
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-      transition: 0.35s;
-    }
+/* Fade animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(56,189,248,0.5);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-    }
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* ============================
-       GRID
-    ============================ */
-    .grid { display: grid; gap: 28px; }
-    .two-col { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+/* Social icons */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+}
 
-    /* ============================
-       SKILLS
-    ============================ */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.social-links a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: 0.3s;
+}
 
-    .skill-box h4 { margin-bottom: 12px; font-size: 16px; color: var(--primary); }
+.social-links a:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
 
-    .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--text);
+}
 
-    .skill {
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(34,197,94,0.08);
-      border: 1px solid rgba(34,197,94,0.35);
-      font-size: 12px;
-      color: var(--secondary);
-    }
-
-    /* ============================
-       TIMELINE
-    ============================ */
-    .timeline { display: flex; flex-direction: column; gap: 24px; }
-
-    .timeline-item h4 { font-size: 19px; margin-bottom: 6px; }
-    .timeline-item span { font-size: 13px; color: var(--muted); }
-    .timeline-item p { margin-top: 12px; font-size: 14px; color: var(--muted); }
-
-    /* ============================
-       PROJECTS
-    ============================ */
-    .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-
-    .tag {
-      font-size: 12px;
-      padding: 5px 12px;
-      border-radius: 8px;
-      background: rgba(56,189,248,0.08);
-      border: 1px solid rgba(56,189,248,0.3);
-      color: var(--primary);
-    }
-
-    /* ============================
-       SOCIAL ICONS
-    ============================ */
-    .social-links {
-      display: flex;
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .social-links a {
-      width: 42px;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      border-color: var(--primary);
-      transform: translateY(-4px);
-    }
-
-    .social-links svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--text);
-    }
-
-    /* ============================
-       CONTACT
-    ============================ */
-    .contact-box p { margin-bottom: 10px; font-size: 15px; }
-
-    /* ============================
-       FOOTER
-    ============================ */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 50px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* ============================
-       RESPONSIVE
-    ============================ */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-card { margin-top: 20px; }
-    }
-
-    @media (max-width: 700px) {
-      .nav-links { display: none; }
-      section { padding: 80px 0; }
-    }
-  </style>
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
+
 <body class="dark">
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="container nav">
-      <div class="logo">Haseeb Tahir</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+<header>
+  <div class="container nav">
+    <div class="logo">Haseeb Tahir</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge">Senior Software QA Engineer</div>
-        <h1>Building <span class="highlight">Quality-Driven</span><br/>Software Experiences</h1>
-        <p>
-          Senior SQA Engineer with 5+ years of experience in contact center solutions, healthcare, telecom, and e-commerce platforms. 
-          Specialized in automation, API testing, CI/CD pipelines, and enterprise-level QA strategies.
-        </p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#projects">Explore Projects</a>
-          <a class="btn btn-outline" href="#contact">Hire Me</a>
-          <a class="btn btn-outline" href="Haseeb Tahir - Resume - Sr SQA Engineer.pdf" download>Download CV</a>
-        </div>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">Senior Software QA Engineer</div>
+      <h1 class="gradient-text">
+        Building <span id="typing-text"></span><span class="cursor"></span><br/>
+        Software Experiences
+      </h1>
 
-        <!-- SOCIAL LINKS -->
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/haseeb-tahir-874024215" target="_blank" title="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.06 20.45H3.56V9h3.5v11.45zM5.31 7.43c-1.12 0-2.03-.91-2.03-2.03 0-1.12.91-2.03 2.03-2.03s2.03.91 2.03 2.03c0 1.12-.91 2.03-2.03 2.03zM20.45 20.45h-3.5v-5.59c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.69h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.41v6.31z"/></svg>
-          </a>
-          <a href="https://github.com/haseebtahir10-lab" target="_blank" title="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.98.57.1.78-.25.78-.55v-1.95c-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .3.21.65.79.54A11.53 11.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/haseeb.tahir.9843/" target="_blank" title="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M24 12c0-6.63-5.37-12-12-12S0 5.37 0 12c0 5.99 4.39 10.95 10.12 11.85v-8.39H7.08V12h3.04V9.36c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.92-1.95 1.87V12h3.32l-.53 3.46h-2.79v8.39C19.61 22.95 24 17.99 24 12z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/haseeb_tahir10/" target="_blank" title="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.22.42.55.21.94.46 1.36.88.42.42.67.81.88 1.36.17.42.37 1.05.42 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.22-.21.55-.46.94-.88 1.36-.42.42-.81.67-1.36.88-.42.17-1.05.37-2.22.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.22-.42-.55-.21-.94-.46-1.36-.88-.42-.42-.67-.81-.88-1.36-.17-.42-.37-1.05-.42-2.22C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.42-2.22.21-.55.46-.94.88-1.36.42-.42.81-.67 1.36-.88.42-.17 1.05-.37 2.22-.42C8.42 2.17 8.8 2.16 12 2.16zm0-2.16C8.74 0 8.33.01 7.05.07 5.77.13 4.9.33 4.15.62c-.78.3-1.44.7-2.1 1.36-.66.66-1.06 1.32-1.36 2.1-.29.75-.49 1.62-.55 2.9C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.55 2.9.3.78.7 1.44 1.36 2.1.66.66 1.32 1.06 2.1 1.36.75.29 1.62.49 2.9.55 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.9-.55.78-.3 1.44-.7 2.1-1.36.66-.66 1.06-1.32 1.36-2.1.29-.75.49-1.62.55-2.9.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.55-2.9-.3-.78-.7-1.44-1.36-2.1-.66-.66-1.32-1.06-2.1-1.36-.75-.29-1.62-.49-2.9-.55C15.67.01 15.26 0 12 0z"/></svg>
-          </a>
-        </div>
+      <p>
+        Senior SQA Engineer with 5+ years of experience in automation, API testing, CI/CD, and enterprise QA strategies.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">Explore Projects</a>
+        <a class="btn" href="#contact">Hire Me</a>
+        <a class="btn" href="Haseeb Tahir - Resume - Sr SQA Engineer.pdf" download>Download CV</a>
       </div>
-      <div class="hero-card">
-        <h3>Professional Snapshot</h3>
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>5+ Years</strong>
-            <span>Industry Experience</span>
-          </div>
-          <div class="stat">
-            <strong>20+ Tools</strong>
-            <span>Testing & Automation</span>
-          </div>
-          <div class="stat">
-            <strong>Multiple Domains</strong>
-            <span>Healthcare, Telecom, CRM, Banking, CCaaS</span>
-          </div>
-          <div class="stat">
-            <strong>Agile Expert</strong>
-            <span>Scrum & CI/CD</span>
-          </div>
-        </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/haseeb-tahir-874024215" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+        <a href="https://github.com/haseebtahir10-lab" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.98z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/haseeb.tahir.9843/" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/haseeb_tahir10/" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07z"/></svg>
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container grid two-col">
-      <div>
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Who I am and how I deliver software quality</p>
-        <p style="color: var(--muted); font-size: 16px;">
-          I am a Senior Software QA Engineer with strong expertise in functional, non-functional, and API testing. 
-          I design robust test strategies, automate complex workflows, and collaborate with cross-functional teams to deliver scalable and reliable software solutions. 
-          My focus is not just finding bugs, but improving product quality and user experience.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Quick Profile</h3>
-        <p><strong>Location:</strong> Islamabad / Rawalpindi, Pakistan</p>
-        <p><strong>Email:</strong> haseebtahir14@gmail.com</p>
-        <p><strong>Phone:</strong> +92 302 7217896</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/haseeb-tahir-874024215</p>
-        <p><strong>Experience:</strong> 5+ Years</p>
-      </div>
+    <div class="hero-card glow float">
+      <h3>Professional Snapshot</h3>
+      <p>5+ Years Experience</p>
+      <p>Automation • API • CI/CD</p>
+      <p>Healthcare • Telecom • CRM</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">Skills & Expertise</h2>
-      <p class="section-subtitle">Tools, technologies, and QA capabilities</p>
-      <div class="skills-grid">
-        <div class="card skill-box">
-          <h4>Testing Expertise</h4>
-          <div class="skill-list">
-            <span class="skill">Functional Testing</span>
-            <span class="skill">Regression Testing</span>
-            <span class="skill">Performance Testing</span>
-            <span class="skill">API Testing</span>
-            <span class="skill">Security Testing</span>
-          </div>
-        </div>
-        <div class="card skill-box">
-          <h4>Automation & Tools</h4>
-          <div class="skill-list">
-            <span class="skill">Playwright</span>
-            <span class="skill">Cucumber / Gherkin</span>
-            <span class="skill">Postman</span>
-            <span class="skill">Apache JMeter</span>
-            <span class="skill">Katalon Studio</span>
-            <span class="skill">OWASP ZAP</span>
-          </div>
-        </div>
-        <div class="card skill-box">
-          <h4>DevOps & Platforms</h4>
-          <div class="skill-list">
-            <span class="skill">Docker</span>
-            <span class="skill">K3s</span>
-            <span class="skill">CI/CD Pipelines</span>
-            <span class="skill">Node-RED</span>
-          </div>
-        </div>
-        <div class="card skill-box">
-          <h4>Management & Process</h4>
-          <div class="skill-list">
-            <span class="skill">Agile / Scrum</span>
-            <span class="skill">Jira</span>
-            <span class="skill">Behaviour-Driven Development (BDD)</span>
-            <span class="skill">Test Strategy</span>
-            <span class="skill">Defect Lifecycle</span>
-            <span class="skill">PI / Sprint Planning</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer style="text-align:center;padding:40px;color:var(--muted);">
+  © 2026 Haseeb Tahir — Senior Software QA Engineer
+</footer>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <h2 class="section-title">Professional Experience</h2>
-      <p class="section-subtitle">My journey in software quality assurance</p>
-      <div class="timeline">
-        <div class="card timeline-item">
-          <h4>Senior SQA Engineer – Expertflow Pvt Ltd</h4>
-          <span>Dec 2021 – Present | Contact Center Solutions</span>
-          <p>
-            Designed test strategies, executed automation tests, and validated CTI integrations with CRM platforms such as Salesforce, SAP, Dynamics 365, HubSpot, and Zoho. 
-            Collaborated with developers and stakeholders to ensure high-quality releases. Identified test scenarios, estimated test effort, and created test plans and maintained the regression test suite and other testing scenarios. Verification of defects and fixes.
-          </p>
-        </div>
-        <div class="card timeline-item">
-          <h4>SQA Engineer – E-MediCare Solutions</h4>
-          <span>Aug 2021 – Dec 2021 | Healthcare & Billing</span>
-          <p>
-            Conducted manual testing, maintained regression suites, analyzed requirements, and ensured defect resolution through close collaboration with development teams.
-          </p>
-        </div>
-        <div class="card timeline-item">
-          <h4>Remittance Transaction Officer – Bank of Punjab</h4>
-          <span>Mar 2020 – Aug 2021</span>
-          <p>
-            Managed remittance processing, ensured accuracy, and supported QA-related operational tasks in banking workflows.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<canvas id="particles"></canvas>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Featured QA Projects</h2>
-      <p class="section-subtitle">Real-world testing and automation initiatives</p>
-      <div class="grid two-col">
-        <div class="card">
-          <h3>WebRTC Load Testing Automation</h3>
-          <p style="color: var(--muted); font-size: 14px;">
-            Designed automated load testing using Katalon Studio for WebRTC-based systems where traditional load testing tools were not applicable.
-          </p>
-          <div class="project-tags">
-            <span class="tag">WebRTC</span>
-            <span class="tag">Katalon</span>
-            <span class="tag">Load Testing</span>
-            <span class="tag">API Testing</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>CTI & CRM Integration Testing</h3>
-          <p style="color: var(--muted); font-size: 14px;">
-            Web Automation testing using Playwright – mainly in JavaScript. Tested CTI frameworks integrated with Salesforce, SAP, Microsoft Dynamics 365, ServiceNow, HubSpot, and Zoho for call flows, screen popups, and real-time CRM interactions. Follows the Behavior Driven Development (BDD) approach, utilizing Gherkin syntax (Cucumber).
-          </p>
-          <div class="project-tags">
-            <span class="tag">CTI</span>
-            <span class="tag">CRM</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Compatibility Testing</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Expertflow CX Testing</h3>
-          <p style="color: var(--muted); font-size: 14px;">
-             Conduct software compatibility tests with programs, hardware, operating systems, or network environments. Designed and executed comprehensive test plans and test cases. Documented the release notes before each QA Sign-off for the product release.
-          </p>
-          <div class="project-tags">
-            <span class="tag">EFCX</span>
-            <span class="tag">Playwright</span>
-            <span class="tag">Functional Testing</span>
-            <span class="tag">Verify Rollover Logs</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>I-HealthCure Mobile/Web Application Testing</h3>
-          <p style="color: var(--muted); font-size: 14px;">
-             Maintained regression suite and conducted manual testing across modules for both native and hybrid mobile apllications. Client Requirement Analysis & Test Plan Generation, Keeping in View Functional Requirements. Collaboration with the support team for communicating with various project teams and managers.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Android Testing</span>
-            <span class="tag">iOS Testing</span>
-            <span class="tag">Functional Testing</span>
-            <span class="tag">Healthcare Systems</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<script>
+// Theme toggle
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+}
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container grid two-col">
-      <div>
-        <h2 class="section-title">Let’s Work Together</h2>
-        <p class="section-subtitle">Open to opportunities and collaborations</p>
-        <p style="color: var(--muted); font-size: 16px;">
-          If you are looking for a Senior SQA Engineer who can ensure product quality, build automation frameworks, and improve testing processes, feel free to connect with me.
-        </p>
-      </div>
-      <div class="card contact-box">
-        <p><strong>Name:</strong> Mr Haseeb Tahir</p>
-        <p><strong>Email:</strong> haseebtahir14@gmail.com</p>
-        <p><strong>Phone:</strong> +92 302 7217896</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/haseeb-tahir-874024215</p>
-      </div>
-    </div>
-  </section>
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.remove('dark');
+}
 
-  <footer>
-    <div class="container">
-      <p>© 2026 Haseeb Tahir — Senior Software QA Engineer. All rights reserved.</p>
-    </div>
-  </footer>
+// Scroll animations
+const elements = document.querySelectorAll(".card, h1, p");
+elements.forEach(el => el.classList.add("fade-up"));
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    }
+function reveal() {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) el.classList.add("show");
+  });
+}
+window.addEventListener("scroll", reveal);
+reveal();
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      document.body.classList.remove('dark');
-    }
-  </script>
+// Typing effect
+const words = ["Quality-Driven", "Automation-Focused", "Enterprise-Ready"];
+let i = 0, j = 0, deleting = false;
+const typing = document.getElementById("typing-text");
+
+function type() {
+  const word = words[i];
+  if (!deleting) {
+    typing.textContent = word.substring(0, j++);
+    if (j > word.length) { deleting = true; setTimeout(type, 1000); return; }
+  } else {
+    typing.textContent = word.substring(0, j--);
+    if (j === 0) { deleting = false; i = (i + 1) % words.length; }
+  }
+  setTimeout(type, deleting ? 60 : 120);
+}
+type();
+
+// Particles background
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+const particles = Array.from({ length: 80 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  vx: (Math.random() - 0.5) * 0.5,
+  vy: (Math.random() - 0.5) * 0.5
+}));
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(56,189,248,0.6)";
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+
+<style>
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+</style>
+
 </body>
 </html>
