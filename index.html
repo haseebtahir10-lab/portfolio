@@ -396,6 +396,101 @@
   from { box-shadow: 0 0 20px rgba(56,189,248,0.4); }
   to { box-shadow: 0 0 50px rgba(168,85,247,0.7); }
 }
+    /* ============================
+   PREMIUM CONNECT SECTION
+============================ */
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.connect-left {
+  animation: fadeUp 1s ease;
+}
+
+.connect-info {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.connect-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.connect-social {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.connect-social a {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.connect-social a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* FORM */
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.connect-form input,
+.connect-form textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.connect-form input:focus,
+.connect-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body class="dark">
@@ -639,22 +734,49 @@
   </section>
   
   <!-- CONTACT -->
-  <section id="contact">
-    <div class="container grid two-col">
-      <div>
-        <h2 class="section-title">Let’s Work Together</h2>
-        <p class="section-subtitle">Open to opportunities and collaborations</p>
-        <p style="color: var(--muted); font-size: 16px;">
-          If you are looking for a Senior SQA Engineer who can ensure product quality, build automation frameworks, and improve testing processes, feel free to connect with me.
-        </p>
+<section id="contact">
+  <div class="container connect-grid">
+    
+    <div class="connect-left">
+      <h2 class="section-title">Let’s Connect</h2>
+      <p class="section-subtitle">
+        Want to collaborate or hire a Senior QA Engineer? Let’s build quality software together.
+      </p>
+
+      <div class="connect-info">
+        <div class="connect-item">
+          <span>📧</span>
+          <p>haseebtahir14@gmail.com</p>
+        </div>
+        <div class="connect-item">
+          <span>📞</span>
+          <p>+92 302 7217896</p>
+        </div>
+        <div class="connect-item">
+          <span>📍</span>
+          <p>Islamabad / Rawalpindi, Pakistan</p>
+        </div>
       </div>
-      <div class="card contact-box">
-        <p><strong>Name:</strong> Mr Haseeb Tahir</p>
-        <p><strong>Email:</strong> haseebtahir14@gmail.com</p>
-        <p><strong>Phone:</strong> +92 302 7217896</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/haseeb-tahir-874024215</p>
+
+      <div class="connect-social">
+        <a href="https://www.linkedin.com/in/haseeb-tahir-874024215" target="_blank">LinkedIn</a>
+        <a href="https://github.com/haseebtahir10-lab" target="_blank">GitHub</a>
+        <a href="https://www.facebook.com/haseeb.tahir.9843/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/haseeb_tahir10/" target="_blank">Instagram</a>
       </div>
     </div>
+
+    <div class="connect-right card">
+      <h3>Send Me a Message</h3>
+      <form class="connect-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+  </div>
 </section>
 
   <footer>
@@ -677,5 +799,6 @@
   </script>
 </body>
 </html>
+
 
 
