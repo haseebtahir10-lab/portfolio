@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     /* ============================
@@ -396,6 +397,95 @@
   from { box-shadow: 0 0 20px rgba(56,189,248,0.4); }
   to { box-shadow: 0 0 50px rgba(168,85,247,0.7); }
 }
+    /* CONNECT SECTION */
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.connect-card {
+  background: linear-gradient(180deg, rgba(2,6,23,0.75), rgba(2,6,23,1));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.connect-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at top left, rgba(56,189,248,0.08), transparent 40%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.connect-card:hover::before {
+  opacity: 1;
+}
+
+.connect-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(56,189,248,0.5);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.45);
+}
+
+.connect-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.connect-card p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.connect-info div {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* SOCIAL GRID */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: 0.3s;
+  background: rgba(56,189,248,0.03);
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Brand Colors */
+.linkedin:hover { color: #0a66c2; }
+.github:hover { color: #fff; }
+.facebook:hover { color: #1877f2; }
+.instagram:hover { color: #e1306c; }
   </style>
 </head>
 <body class="dark">
@@ -638,24 +728,59 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container grid two-col">
-      <div>
-        <h2 class="section-title">Let’s Work Together</h2>
-        <p class="section-subtitle">Open to opportunities and collaborations</p>
-        <p style="color: var(--muted); font-size: 16px;">
-          If you are looking for a Senior SQA Engineer who can ensure product quality, build automation frameworks, and improve testing processes, feel free to connect with me.
+<!-- LET'S CONNECT SECTION -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Let’s Connect</h2>
+    <p class="section-subtitle">Feel free to reach out for collaboration or opportunities</p>
+
+    <div class="connect-grid">
+      
+      <!-- Left Info Card -->
+      <div class="connect-card">
+        <h3>🚀 Work With Me</h3>
+        <p>
+          I’m open to Senior SQA roles, automation projects, and enterprise QA collaborations.  
+          Let’s build reliable and scalable software together.
         </p>
+
+        <div class="connect-info">
+          <div>📍 Rawalpindi, Pakistan</div>
+          <div>📧 haseebtahir14@gmail.com</div>
+          <div>📞 +92 302 7217896</div>
+        </div>
+
+        <a href="Haseeb_Tahir_CV.pdf" download class="btn btn-primary">
+          Download CV
+        </a>
       </div>
-      <div class="card contact-box">
-        <p><strong>Name:</strong> Mr Haseeb Tahir</p>
-        <p><strong>Email:</strong> haseebtahir14@gmail.com</p>
-        <p><strong>Phone:</strong> +92 302 7217896</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/haseeb-tahir-874024215</p>
+
+      <!-- Social Links Card -->
+      <div class="connect-card social-card">
+        <h3>🌐 Social Profiles</h3>
+
+        <div class="social-grid">
+          <a href="https://linkedin.com/in/haseeb-tahir-874024215" target="_blank" class="social-btn linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+
+          <a href="https://github.com/haseebtahir10-lab" target="_blank" class="social-btn github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+
+          <a href="https://www.facebook.com/haseeb.tahir.9843/" target="_blank" class="social-btn facebook">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+
+          <a href="https://www.instagram.com/haseeb_tahir10/" target="_blank" class="social-btn instagram">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <div class="container">
@@ -677,4 +802,5 @@
   </script>
 </body>
 </html>
+
 
