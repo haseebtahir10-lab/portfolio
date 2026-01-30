@@ -396,6 +396,109 @@
   from { box-shadow: 0 0 20px rgba(56,189,248,0.4); }
   to { box-shadow: 0 0 50px rgba(168,85,247,0.7); }
 }
+    /* ============================
+   PREMIUM CONNECT SECTION
+============================ */
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.connect-desc {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 10px 0 20px;
+}
+
+/* INFO LIST */
+.connect-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.connect-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.connect-item:hover {
+  transform: translateX(6px);
+  border-color: var(--primary);
+}
+
+/* ICON STYLE */
+.connect-item .icon {
+  font-size: 18px;
+}
+
+/* QR CODE BOX */
+.qr-box {
+  margin-top: 20px;
+  background: var(--card);
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  width: fit-content;
+}
+
+.qr-box h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.qr-box img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+}
+
+/* FORM */
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.connect-form input,
+.connect-form textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.connect-form input:focus,
+.connect-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body class="dark">
@@ -633,33 +736,75 @@
             <span class="tag">Functional Testing</span>
             <span class="tag">Healthcare Systems</span>
           </div>
+            </div>
+        <div class="card">
+          <h3>E-commerce Web Application</h3>
+          <p style="color: var(--muted); font-size: 14px;">
+             University Final Year Project about the buying and selling of goods and services. Components involves online storefronts, shopping carts, payment gateways (e.g., PayPal, Stripe), and logistics/shipping.
+          </p>
+          <div class="project-tags">
+            <span class="tag">FYP</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container grid two-col">
-      <div>
-        <h2 class="section-title">Let’s Work Together</h2>
-        <p class="section-subtitle">Open to opportunities and collaborations</p>
-        <p style="color: var(--muted); font-size: 16px;">
-          If you are looking for a Senior SQA Engineer who can ensure product quality, build automation frameworks, and improve testing processes, feel free to connect with me.
-        </p>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container connect-grid">
+
+    <!-- LEFT SIDE -->
+    <div class="connect-left">
+      <h2 class="section-title">Let’s Connect</h2>
+      <p class="section-subtitle">Open to opportunities and collaborations</p>
+      <p class="connect-desc">
+        If you are looking for a Senior SQA Engineer who can ensure product quality, build automation frameworks, and improve testing processes, feel free to connect with me.
+      </p>
+
+      <div class="connect-info">
+        <div class="connect-item">
+          <span class="icon">👤</span>
+          <span>Mr Haseeb Tahir</span>
+        </div>
+        <div class="connect-item">
+          <span class="icon">📧</span>
+          <span>haseebtahir14@gmail.com</span>
+        </div>
+        <div class="connect-item">
+          <span class="icon">📞</span>
+          <span>+92 302 7217896</span>
+        </div>
+        <div class="connect-item">
+          <span class="icon">📍</span>
+          <span>Islamabad / Rawalpindi, Pakistan</span>
+        </div>
       </div>
-      <div class="card contact-box">
-        <p><strong>Name:</strong> Mr Haseeb Tahir</p>
-        <p><strong>Email:</strong> haseebtahir14@gmail.com</p>
-        <p><strong>Phone:</strong> +92 302 7217896</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/haseeb-tahir-874024215</p>
+
+      <!-- WhatsApp QR Code -->
+      <div class="qr-box">
+        <h4>WhatsApp QR</h4>
+        <img src="whatsapp-qr.png" alt="WhatsApp QR Code">
       </div>
     </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="connect-right card">
+      <h3>Send Me a Message</h3>
+      <form class="connect-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+  </div>
 </section>
 
   <footer>
     <div class="container">
-      <p>© 2026 Haseeb Tahir — Senior Software QA Engineer. All rights reserved.</p>
+      <p>© 2026-27 Haseeb Tahir — Senior Software QA Engineer. All rights reserved.</p>
     </div>
   </footer>
 
@@ -677,3 +822,4 @@
   </script>
 </body>
 </html>
+
