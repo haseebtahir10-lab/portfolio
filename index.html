@@ -499,6 +499,62 @@
     grid-template-columns: 1fr;
   }
 }
+    /* ============================
+   FORM + QR LAYOUT (RIGHT SIDE)
+============================ */
+
+.form-qr-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* FORM WIDTH */
+.connect-form {
+  flex: 1;
+}
+
+/* QR RIGHT ALIGN */
+.qr-side {
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 14px;
+  min-width: 120px;
+  transition: 0.3s;
+}
+
+.qr-side:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.qr-side p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.qr-side img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+}
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 700px) {
+  .form-qr-wrapper {
+    flex-direction: column;
+  }
+
+  .qr-side {
+    margin-top: 10px;
+    width: fit-content;
+  }
+}
   </style>
 </head>
 <body class="dark">
@@ -780,17 +836,30 @@
           <span>Islamabad / Rawalpindi, Pakistan</span>
         </div>
       </div>
-     <!-- WhatsApp QR Code -->
 
-    
     <!-- RIGHT SIDE FORM -->
-    <div class="connect-right card">
-      <h3>Send Me a Message</h3>
-      <div class="qr-box">
-        <h4>WhatsApp QR</h4>
-        <img src="whatsapp-qr.png" alt="WhatsApp QR Code">
-      </div>
+<div class="connect-right card">
+  <h3>Send Me a Message</h3>
+
+  <div class="form-qr-wrapper">
+    
+    <!-- FORM -->
+    <form id="contactForm" class="connect-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p id="form-status" style="margin-top:10px;font-size:14px;"></p>
+    </form>
+
+    <!-- WHATSAPP QR -->
+    <div class="qr-side">
+      <p>WhatsApp</p>
+      <img src="whatsapp-qr.png" alt="WhatsApp QR Code">
     </div>
+
+  </div>
+</div>
 
   </div>
 </section>
@@ -815,6 +884,7 @@
   </script>
 </body>
 </html>
+
 
 
 
