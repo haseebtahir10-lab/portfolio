@@ -505,18 +505,26 @@
 
 .premium-whatsapp {
   position: relative;
+  display: flex;                /* 👈 IMPORTANT */
+  flex-direction: column;       /* 👈 IMPORTANT */
+  align-items: center;          /* 👈 centers badge, QR, text */
+  justify-content: center;
+
   text-align: center;
-  padding: 16px;
+  padding: 20px;
   border-radius: 18px;
+
   background: linear-gradient(
     180deg,
     rgba(255,255,255,0.06),
     rgba(255,255,255,0.02)
   );
+
   backdrop-filter: blur(16px);
   border: 1px solid rgba(56,189,248,0.35);
-  min-width: 150px;
+  min-width: 260px;             /* looks more premium */
   overflow: hidden;
+
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -535,11 +543,10 @@
   position: relative;
   z-index: 2;
   font-size: 11px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #22c55e;
-  margin-bottom: 8px;
-  display: inline-block;
+  margin-bottom: 10px;
 }
 
 /* IMAGE */
@@ -634,6 +641,15 @@
     margin-top: 10px;
     width: fit-content;
   }
+}
+    /* RIGHT COLUMN FIX */
+.connect-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 👈 pushes QR to the right */
+}
+    .connect-right.card {
+  justify-content: center;
 }
   </style>
 </head>
@@ -953,5 +969,6 @@
   </script>
 </body>
 </html>
+
 
 
