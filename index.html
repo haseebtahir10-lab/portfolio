@@ -923,11 +923,7 @@
           <span>Islamabad / Rawalpindi, Pakistan</span>
         </div>
       </div>
-
-    <!-- RIGHT SIDE FORM -->
-    <div class="connect-right card">
-      <h3>Send Me a Message</h3>
-      <!-- WhatsApp QR Code -->
+            <!-- WhatsApp QR Code -->
 <div class="qr-side premium-whatsapp">
   <div class="qr-glow"></div>
   <span class="qr-badge">WhatsApp</span>
@@ -936,6 +932,19 @@
 
   <p class="qr-hint">Scan to chat instantly</p>
 </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="connect-right card">
+      <h3>Send Me a Message</h3>
+
+          <!-- FORM -->
+    <form id="contactForm" class="connect-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p id="form-status" style="margin-top:10px;font-size:14px;"></p>
+    </form>
 
   </div>
 </section>
@@ -960,6 +969,7 @@
   </script>
 </body>
 </html>
+
 
 
 
