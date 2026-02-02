@@ -641,15 +641,20 @@
     margin-top: 10px;
     width: fit-content;
   }
-}
-    .connect-grid {
+/* MAIN CONTACT GRID */
+.connect-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: center; /* 🔥 vertical alignment */
 }
 
-/* RIGHT COLUMN */
+/* LEFT */
+.connect-left {
+  max-width: 720px;
+}
+
+/* RIGHT */
 .connect-right {
   display: flex;
   justify-content: flex-end;
@@ -909,41 +914,36 @@
 <section id="contact">
   <div class="container connect-grid">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT COLUMN -->
     <div class="connect-left">
       <h2 class="section-title">Let’s Connect</h2>
       <p class="section-subtitle">Open to opportunities and collaborations</p>
+
       <p class="connect-desc">
-        If you are looking for a Senior SQA Engineer who can ensure product quality, build automation frameworks, and improve testing processes, feel free to connect with me.
+        If you are looking for a Senior SQA Engineer who can ensure product quality,
+        build automation frameworks, and improve testing processes, feel free to connect with me.
       </p>
 
       <div class="connect-info">
-        <div class="connect-item">
-          <span class="icon">👤</span>
-          <span>Mr Haseeb Tahir</span>
-        </div>
-        <div class="connect-item">
-          <span class="icon">📧</span>
-          <span>haseebtahir14@gmail.com</span>
-        </div>
-        <div class="connect-item">
-          <span class="icon">📞</span>
-          <span>+92 302 7217896</span>
-        </div>
-        <div class="connect-item">
-          <span class="icon">📍</span>
-          <span>Islamabad / Rawalpindi, Pakistan</span>
-        </div>
+        <div class="connect-item">👤 Mr Haseeb Tahir</div>
+        <div class="connect-item">📧 haseebtahir14@gmail.com</div>
+        <div class="connect-item">📞 +92 302 7217896</div>
+        <div class="connect-item">📍 Islamabad / Rawalpindi, Pakistan</div>
       </div>
-    <!-- RIGHT SIDE (QR) -->
+    </div>
+
+    <!-- RIGHT COLUMN -->
     <div class="connect-right">
-      <div class="qr-side premium-whatsapp">
+      <div class="premium-whatsapp">
         <div class="qr-glow"></div>
         <span class="qr-badge">WhatsApp</span>
         <img src="whatsapp-qr.png" alt="WhatsApp QR Code">
         <p class="qr-hint">Scan to chat instantly</p>
       </div>
     </div>
+
+  </div>
+</section>
 
   <!-- RIGHT SIDE FORM -->
       <!-- <div class="connect-right card"> -->
@@ -981,6 +981,7 @@
   </script>
 </body>
 </html>
+
 
 
 
